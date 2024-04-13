@@ -404,6 +404,26 @@ body:not(.user-is-tabbing) a:focus {
     height: 2px;
     background: var(--pink);
 }
+.nav-bar {
+    width: 100%;
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    backdrop-filter: blur(5px); /* Gaussian blur applied here */
+    z-index: 1000; /* Ensures the nav bar is above other content */
+}
+/* Add some basic styling to nav elements if necessary */
+.nav-bar ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-bar li {
+    padding: 10px;
+}
 
 /* --------------------------------------- */
 /* ----- Header ----- */
