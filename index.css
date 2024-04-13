@@ -185,61 +185,7 @@ p {
     }
 }
 
-/* Base styling for the navigation bar */
-.nav-bar {
-    width: 100%;
-    position: fixed; /* Keeps the nav bar fixed at the top of the viewport */
-    top: 0;
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque for better readability */
-    backdrop-filter: blur(0px); /* Start without blur, add it dynamically with JavaScript */
-    padding: 10px 0; /* Added padding for better aesthetics */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    z-index: 1000; /* Ensures the nav bar is above other content */
-    transition: backdrop-filter 0.3s ease; /* Smooth transition for the blur effect */
-}
 
-/* Improved styling for navigation links */
-.nav-bar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center; /* Center the navigation items */
-    max-width: 960px; /* Max width for the content inside nav */
-}
-
-.nav-bar li {
-    padding: 0 20px; /* Horizontal padding for each nav item */
-}
-
-.nav-bar a {
-    text-decoration: none;
-    color: #333; /* Dark color for better readability */
-    font-weight: bold; /* Makes the text bold */
-    transition: color 0.3s ease; /* Smooth transition for hover effects */
-}
-
-.nav-bar a:hover,
-.nav-bar a:focus {
-    color: #0056b3; /* Highlight color on hover and focus */
-}
-
-/* Responsive styling, collapses or changes layout on smaller screens */
-@media (max-width: 768px) {
-    .nav-bar ul {
-        flex-direction: column; /* Stack nav items vertically on small screens */
-        align-items: center; /* Align items in the center for a tidy appearance */
-    }
-
-    .nav-bar li {
-        text-align: center; /* Center-align text for vertical layout */
-        padding: 10px 0; /* Adjust padding for better tap targets */
-    }
-
-    .nav-bar a {
-        font-size: 1.2em; /* Increase font size for better readability on small devices */
-    }
-}
 
 /* --------------------------------------- */
 /* ----- Buttons and Links ----- */
