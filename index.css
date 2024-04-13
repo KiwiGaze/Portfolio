@@ -38,6 +38,8 @@
     --blue: #007AFF;
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
+    --grey: #f5f5f5;
+    --pure-white: #fff;
 
 
     --container-max-width: 1180px;
@@ -51,7 +53,7 @@
     --gutter-small-1: 2.5rem;
     --gutter-small: 2rem;
 
-    --border-light: 1px solid rgb(36, 35, 35);
+    --border-light: 1px solid rgb(195, 193, 193);
 }
 
 html {
@@ -70,9 +72,9 @@ body {
     font-size: var(--font-size-small);
     font-family: var(--font-stack);
     font-weight: 400;
-    color: var(--white-1);
+    color: var(--white);
     line-height: var(--line-height-normal);
-    background: var(--black);
+    background: var(--white-1);
     overflow-x: hidden;
 }
 
@@ -125,7 +127,7 @@ h3 {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     line-height: var(--line-height-small);
-    color: var(--white);
+    color: var(--black);
 }
 
 .heading-primary {
@@ -177,6 +179,7 @@ h3 {
 
 p {
     margin: var(--gutter-small-1) 0;
+    color: var(--black); /* Change color to black */
 }
 
 @media(max-width: 900px) {
@@ -221,7 +224,7 @@ body:not(.user-is-tabbing) a:focus {
     display: inline-block;
     padding: 1rem 4.2rem;
     text-decoration: none;
-    color: inherit;
+    color: var(--black);
     border: 1px solid  var(--blue);
     font-weight: 400;
 }
@@ -237,7 +240,7 @@ body:not(.user-is-tabbing) a:focus {
     top: 0;
     left: 0;
     right: 100%;
-    background: var(--white);
+    background: var(--black);
     height: 100%;
     z-index: -1;
     transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
@@ -378,7 +381,7 @@ body:not(.user-is-tabbing) a:focus {
     display: inline-block;
     padding: 1rem 0;
     text-decoration: none;
-    color: inherit;
+    color: var(--black);
     transition: all .2s;
     padding-top: var(--gutter-small); /* Increase top padding */
     padding-bottom: var(--gutter-small); /* Increase bottom padding */
@@ -404,14 +407,6 @@ body:not(.user-is-tabbing) a:focus {
     right: 0;
     height: 2px;
     background: var(--blue);
-}
-.nav-bar {
-    width: 100%;
-    position: fixed; /* Fixed at the top */
-    top: 0;
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
-    backdrop-filter: blur(5px); /* Gaussian blur applied here */
-    z-index: 1000; /* Ensures the nav bar is above other content */
 }
 
 /* --------------------------------------- */
