@@ -227,10 +227,18 @@ body:not(.user-is-tabbing) a:focus {
     color: var(--black);
     border: 1px solid  var(--blue);
     font-weight: 400;
+    border-radius: 30px;
+    overflow: hidden; /* Ensures that the ::after pseudo-element does not overflow the button's rounded corners */
 }
 
 .btn:focus {
     outline: none;
+}
+
+.btn:hover {
+    
+    color: var(--pure-white); /* Change the text color to white on hover */
+    
 }
 
 .btn::after {
