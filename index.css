@@ -35,7 +35,7 @@
     --line-height-small: 1.2;
 
     --black: #000;
-    --pink: #ff3258;
+    --pink: #007AFF;
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
 
@@ -70,9 +70,9 @@ body {
     font-size: var(--font-size-small);
     font-family: var(--font-stack);
     font-weight: 400;
-    color: var(--black); /* changed to black */
+    color: var(--white-1);
     line-height: var(--line-height-normal);
-    background: var(--white); /* changed to white */
+    background: var(--black);
     overflow-x: hidden;
 }
 
@@ -125,7 +125,7 @@ h3 {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     line-height: var(--line-height-small);
-    color: var(--black);
+    color: var(--white);
 }
 
 .heading-primary {
@@ -186,7 +186,6 @@ p {
 }
 
 
-
 /* --------------------------------------- */
 /* ----- Buttons and Links ----- */
 /* --------------------------------------- */
@@ -223,7 +222,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: 1rem 4.2rem;
     text-decoration: none;
     color: inherit;
-    border: 1px solid  var(--black);
+    border: 1px solid  var(--pink);
     font-weight: 400;
 }
 
@@ -247,7 +246,7 @@ body:not(.user-is-tabbing) a:focus {
 .btn:hover::after,
 .btn:focus::after {
     right: 0;
-    background: var(--grey);
+    background: var(--pink);
 }
 
 .btn--pink {
@@ -312,7 +311,7 @@ body:not(.user-is-tabbing) a:focus {
     align-items: center;
     height: 5.5rem;
     width: 5.5rem;
-    background-color: var(--grey);
+    background-color: var(--pink);
     border-radius: 50%;
     z-index: 10;
     visibility: hidden;
@@ -405,6 +404,14 @@ body:not(.user-is-tabbing) a:focus {
     right: 0;
     height: 2px;
     background: var(--pink);
+}
+.nav-bar {
+    width: 100%;
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    backdrop-filter: blur(5px); /* Gaussian blur applied here */
+    z-index: 1000; /* Ensures the nav bar is above other content */
 }
 
 /* --------------------------------------- */
