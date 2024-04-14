@@ -132,7 +132,7 @@ h3 {
 
 .heading-primary {
     line-height: 1;
-    font-size: var(--font-size-huge);
+    font-size: var(--font-size-medium);
     font-weight: 400;
     margin-left: var(--gutter-normal); /* Add margin to the left of the title */
     margin-right: var(--gutter-normal); /* Add margin to the right of the title */
@@ -352,7 +352,7 @@ body:not(.user-is-tabbing) a:focus {
 .nav {
     display: flex;
     justify-content: center;
-    padding: var(--gutter-normal) 0;
+    padding: var(--gutter-small) 0;
     padding-right: var(--gutter-normal); /* Add padding to the right of the nav */
     padding-left: var(--gutter-normal); /* Add padding to the left of the nav */
     background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
@@ -439,10 +439,11 @@ body:not(.user-is-tabbing) a:focus {
     background-position: center;
     background-attachment: fixed;
     font-size: var(--font-size-normal);
-    padding-top: calc(var(--gutter-normal) + 200px); /* Increased top padding to accommodate nav bar */
+    padding-top: var(--gutter-normal); /* Increased top padding to accommodate nav bar */
     padding-bottom: var(--gutter-normal);
     padding-left: var(--gutter-small);
     padding-right: var(--gutter-small);
+    display: flex; /* Flexbox layout */
     align-items: center;  /* Vertical centering */
     text-align: center; /* Centers the text within the element */
     justify-content: center;  /* Horizontal centering */
