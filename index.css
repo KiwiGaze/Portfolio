@@ -378,8 +378,8 @@ body:not(.user-is-tabbing) a:focus {
     padding-right: var(--gutter-normal); /* Add padding to the right of the nav */
     padding-left: var(--gutter-normal); /* Add padding to the left of the nav */
     background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
-    backdrop-filter: blur(10px); /* Gaussian blur */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    backdrop-filter: blur(20px); /* Gaussian blur */
+    -webkit-backdrop-filter: blur(20px); /* For Safari */
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Optional: adds a subtle border line for better visual separation */
     width: 100%;
     position: fixed; /* Keeps the nav fixed at the top of the viewport */
@@ -456,7 +456,7 @@ body:not(.user-is-tabbing) a:focus {
 .header {
     position: relative;
     background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
-        url('./images/blue_wall.jpg');
+        url('./backgorund/oscar-cadiach-8DGoi06ojZU-unsplash.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -516,10 +516,25 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 /* ----- Work ----- */
 /* --------------------------------------- */
+.work {
+    display: flex;  /* Establishes this section as a flex container */
+    flex-direction: column;  /* Stacks flex items vertically */
+    align-items: center;  /* Centers the heading horizontally */
+    justify-content: flex-start;  /* Aligns content to the start, pushing the heading to the top */
+    text-align: center;  /* Centers the text within the heading element itself */
+    padding: 20px;  /* Adds some padding inside the section */
+    border-radius: 30px;  /* Applies rounded corners to the section */
+    background-color: rgba(255, 255, 255, 0.3);  /* Semi-transparent white background */
+    backdrop-filter: blur(10px);  /* Adds a blur effect to the background */
+    margin: 20px;  /* Adds margin around the section for spacing from other elements */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);  /* Optional shadow for depth */
+    width: 60%;  /* Controls the width of the section to ensure it's not full width */
+    margin-top: 50px;  /* Additional top margin to distance it from elements above, if necessary */
+}
 
 .work__box {
     display: flex;
-    align-items: center;
+    align-items: center;  /* Centers content horizontally in the box */
 }
 
 @media(max-width: 900px) {
@@ -545,7 +560,8 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__text {
-    flex: 0 0 30%;
+    text-align: center;  /* Centers the text inside the text container */
+    width: 100%;  /* Optional: ensures text container uses full width of its parent */
 }
 
 .work__list {
