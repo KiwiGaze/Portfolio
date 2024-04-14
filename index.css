@@ -380,7 +380,6 @@ body:not(.user-is-tabbing) a:focus {
     background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
     backdrop-filter: blur(20px); /* Gaussian blur */
     -webkit-backdrop-filter: blur(20px); /* For Safari */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Optional: adds a subtle border line for better visual separation */
     width: 100%;
     position: fixed; /* Keeps the nav fixed at the top of the viewport */
     top: 0; /* Aligns the nav to the top */
