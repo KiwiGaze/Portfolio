@@ -35,7 +35,7 @@
     --line-height-small: 1.2;
 
     --black: #000;
-    --blue: #007AFF;
+    --blue: #0069ee;
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
     --grey: #f5f5f5;
@@ -266,10 +266,24 @@ body:not(.user-is-tabbing) a:focus {
     right: 0;
     background: var(--blue);
 }
+.button-container {
+    display: flex;
+    justify-content: start; /* Adjust as needed: start, space-between, center, etc.*/
+    align-items: center;
+}
 
 .btn--blue {
-    background: var(--blue);
-    transition: all 0.2s;
+    display: inline-block;
+    margin-right: 10px;
+    backdrop-filter: blur(10px); /* Adjust the px value to increase or decrease the blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    border: 1px solid transparent; /* Set border color to transparent */
+    color: white; /* Ensuring text is visible, adjust as needed */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow below the button */
+}
+.btn--blue:last-child {
+    margin-right: 0;
 }
 
 .btn--blue::after {
@@ -278,7 +292,8 @@ body:not(.user-is-tabbing) a:focus {
 
 .btn--blue:hover,
 .btn--blue:focus {
-    background: transparent;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
 }
 
 .link__text {
@@ -439,8 +454,9 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .header {
+    position: relative;
     background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
-        url('./images/header.jpg');
+        url('./images/blue_wall.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -482,6 +498,16 @@ body:not(.user-is-tabbing) a:focus {
         transform: scale(.8);
     }
 }
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+    .header__text-box {
+        align-items: center;
+    }
+}
+
 
 .header .header__text-box .highlight {
     color: white; /* Increasing specificity */
@@ -662,3 +688,49 @@ body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-medium) 0;
     } 
 }
+
+/* --------------------------------------- */
+/* ---------- Social Media Bar ----------- */
+/* --------------------------------------- */
+
+.social-media-bar {
+    position: absolute;
+    text-decoration: none; /* Removes underline from links */
+    bottom: 5%; /* Anchors the bar to the bottom of the header */
+    left: 50%; /* Initially positions the left edge of the bar at the center of the header */
+    transform: translateX(-50%); /* Moves the bar leftwards by half its own width to center it */
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-radius: 30px; /* Rounded corners */
+    display: flex;
+    justify-content: center; /* Centers icons horizontally */
+    align-items: center; /* Center the icons within the bar vertically */
+    padding: 10px 10px; /* Top and bottom padding, and some padding on the sides */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds subtle shadow above the social media bar */
+}
+
+
+.social-icon {
+    display: inline-block;
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Sets the color of the link text, if any */
+    margin: 5px 15px; /* Adds horizontal spacing between icons */
+}
+
+.social-icon img {
+    width: 30px; /* Sets a uniform size for the icons */
+    height: 30px;
+    display: block;  /* Removes any extra line-height space */
+    transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Specific styling for the LinkedIn icon if it has a unique class or ID */
+.social-icon.linkedin img { /* Assume you add a class "linkedin" to the LinkedIn <a> tag */
+    width: 37px;  /* Adjust the size to match other icons */
+    height: 37px; /* Adjust the size to match other icons */
+}
+
+.social-icon:hover img {
+    transform: scale(1.2); /* Slightly enlarges the icon on hover */
+}
+
