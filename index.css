@@ -39,6 +39,7 @@
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
     --grey: #f5f5f5;
+    --light-grey: #e0e0e0;
     --pure-white: #fff;
 
 
@@ -74,7 +75,7 @@ body {
     font-weight: 400;
     color: var(--white);
     line-height: var(--line-height-normal);
-    background: var(--pure-white);
+    background: var(--light-grey);
     overflow-x: hidden;
 }
 
@@ -110,6 +111,10 @@ body {
 section {
     padding: var(--gutter-huge) 0;
     border-bottom: var(--border-light);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%); /* Adjusts the position to truly center the element */
+    max-width: 100%; /* Ensures the text has full width for better control */
 }
 
 img {
@@ -158,7 +163,7 @@ h2::after {
     content: '';
     display: block;
     height: 2px;
-    width: 10rem;
+    width: 30rem;
     background: var(--blue);
     margin: var(--gutter-small) 0;
 }
@@ -523,12 +528,11 @@ body:not(.user-is-tabbing) a:focus {
     text-align: center;  /* Centers the text within the heading element itself */
     padding: 20px;  /* Adds some padding inside the section */
     border-radius: 30px;  /* Applies rounded corners to the section */
-    background-color: rgba(255, 255, 255, 0.3);  /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.7);  /* Semi-transparent white background */
     backdrop-filter: blur(10px);  /* Adds a blur effect to the background */
-    margin: 20px;  /* Adds margin around the section for spacing from other elements */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);  /* Optional shadow for depth */
-    width: 98%;  /* Controls the width of the section to ensure it's not full width */
-    margin-top: 20px;  /* Additional top margin to distance it from elements above, if necessary */
+    margin-top: 10px;  /* Additional top margin to distance it from elements above, if necessary */
+    margin-bottom: 10px;
 }
 
 .work__box {
