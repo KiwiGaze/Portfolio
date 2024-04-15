@@ -296,7 +296,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .btn--blue:hover,
 .btn--blue:focus {
-    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    background-color: rgba(0, 105, 238, 0.8); /* Semi-transparent white background */
     transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
 }
 
@@ -382,8 +382,8 @@ body:not(.user-is-tabbing) a:focus {
     padding-right: var(--gutter-normal); /* Add padding to the right of the nav */
     padding-left: var(--gutter-normal); /* Add padding to the left of the nav */
     background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
-    backdrop-filter: blur(20px); /* Gaussian blur */
-    -webkit-backdrop-filter: blur(20px); /* For Safari */
+    backdrop-filter: blur(10px); /* Gaussian blur */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
     width: 100%;
     position: fixed; /* Keeps the nav fixed at the top of the viewport */
     top: 0; /* Aligns the nav to the top */
