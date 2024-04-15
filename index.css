@@ -109,7 +109,6 @@ body {
 }
 
 section {
-    padding: var(--gutter-huge) 0;
     border-bottom: var(--border-light);
     position: relative;
     left: 50%;
@@ -524,7 +523,6 @@ body:not(.user-is-tabbing) a:focus {
     display: flex;  /* Establishes this section as a flex container */
     flex-direction: column;  /* Stacks flex items vertically */
     align-items: center;  /* Centers the heading horizontally */
-    justify-content: flex-start;  /* Aligns content to the start, pushing the heading to the top */
     text-align: center;  /* Centers the text within the heading element itself */
     padding: 20px;  /* Adds some padding inside the section */
     border-radius: 30px;  /* Applies rounded corners to the section */
@@ -533,6 +531,7 @@ body:not(.user-is-tabbing) a:focus {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);  /* Optional shadow for depth */
     margin-top: 10px;  /* Additional top margin to distance it from elements above, if necessary */
     margin-bottom: 10px;
+    margin-right: 20px;
 }
 
 .work__box {
